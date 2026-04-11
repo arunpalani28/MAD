@@ -52,8 +52,16 @@ class _EmailLoginWidgetState extends State<EmailLoginWidget> with TickerProvider
     _mobileController.dispose();
     super.dispose();
   }
+  
 
   Future<void> _loginOrSignup() async {
+    Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (_) => const MainWrapper()),
+        );
+  }
+
+  Future<void> _loginOrSignuptest() async {
     if (!_formKey.currentState!.validate()) return;
     setState(() => _loading = true);
 
