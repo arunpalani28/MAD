@@ -54,20 +54,23 @@ class _EmailLoginWidgetState extends State<EmailLoginWidget> with TickerProvider
   }
   
 
-  Future<void> _loginOrSignup() async {
+  Future<void> _loginOrSignuptest() async {
     Navigator.pushReplacement(
           context,
           MaterialPageRoute(builder: (_) => const MainWrapper()),
         );
   }
 
-  Future<void> _loginOrSignuptest() async {
+  Future<void> _loginOrSignup() async {
     if (!_formKey.currentState!.validate()) return;
     setState(() => _loading = true);
 
-    final url = isLoginMode
-        ? 'http://localhost:8067/mad-be/api/auth/login'  // Login endpoint
-        : 'http://localhost:8067/mad-be/api/auth/signup'; // Signup endpoint
+    // final url = isLoginMode
+    //     ? 'http://localhost:8067/mad-be/api/auth/login'  // Login endpoint
+    //     : 'http://localhost:8067/mad-be/api/auth/signup'; // Signup endpoint
+final url = isLoginMode
+        ? 'http://madbackend-env.eba-7mxiyptt.ap-south-1.elasticbeanstalk.com/mad-be/api/auth/login'  // Login endpoint
+        : 'http://madbackend-env.eba-7mxiyptt.ap-south-1.elasticbeanstalk.com/mad-be/api/auth/signup'; // Signup endpoint
 
     try {
       // For Signup, we send name, email, mobile, and password

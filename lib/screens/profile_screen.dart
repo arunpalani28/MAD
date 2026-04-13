@@ -93,7 +93,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
                 // Call API to update user details
                 final response = await http.post(
-                  Uri.parse('http://localhost:8067/mad-be/api/auth/update'),
+                  Uri.parse('http://madbackend-env.eba-7mxiyptt.ap-south-1.elasticbeanstalk.com/mad-be/api/auth/update'),
                   headers: {'Content-Type': 'application/json'},
                   body: jsonEncode({
                     "id": _user!.userId,

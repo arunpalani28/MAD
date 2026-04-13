@@ -56,7 +56,7 @@ class SubscriptionCalendarResponse {
 
 // ---------------- API Service ----------------
 class SubscriptionApi {
-  static const String baseUrl = "http://localhost:8067/mad-be/api"; // replace with your backend
+  static const String baseUrl = "http://madbackend-env.eba-7mxiyptt.ap-south-1.elasticbeanstalk.com/mad-be/api"; // replace with your backend
 
   // Fetch calendar for subscription
   static Future<SubscriptionCalendarResponse?> fetchCalendar(int subscriptionId) async {

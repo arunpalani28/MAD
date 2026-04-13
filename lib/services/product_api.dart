@@ -5,7 +5,7 @@ import '../models/product.dart';
 
 class ProductApi {
   static const String baseUrl =
-      "http://localhost:8067/mad-be/api/products"; // Android emulator
+      "http://madbackend-env.eba-7mxiyptt.ap-south-1.elasticbeanstalk.com/mad-be/api/products"; // Android emulator
 
   static Future<List<Product>> fetchProducts(String category) async {
     final token = await UserSession.getToken(); // 🔑 fetch token
